@@ -75,6 +75,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Filters\ExceptionHandler.cs" />
+    <Compile Include="Filters\ApiAuthenticationFilter.cs" />
+    <Compile Include="Filters\NotImplExceptionFilter.cs" />
+    <Compile Include="Filters\RequestDataFormatValidationHandler.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -90,14 +95,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\System.Net.Http.Formatting\System.Net.Http.Formatting.csproj">
       <Project>{668e9021-ce84-49d9-98fb-df125a9fcdb0}</Project>
       <Name>System.Net.Http.Formatting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\System.Web.Http.Cors\System.Web.Http.Cors.csproj">
+      <Project>{25DEF6F6-7F99-4EB7-91ED-5181A346AFE1}</Project>
+      <Name>System.Web.Http.Cors</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\System.Web.Http.WebHost\System.Web.Http.WebHost.csproj">
       <Project>{a0187bc2-8325-4bb2-8697-7f955cf4173e}</Project>
