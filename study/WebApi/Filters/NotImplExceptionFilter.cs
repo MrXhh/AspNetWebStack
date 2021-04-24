@@ -15,6 +15,11 @@ namespace WebApi.Filters
 
         public static HttpResponseMessage ExceptionHandling(Exception exception, HttpResponseMessage httpResponseMessage, HttpRequestMessage httpRequestMessage)
         {
+            if (httpResponseMessage == null)
+            {
+                httpResponseMessage = new HttpResponseMessage();
+            }
+
             httpResponseMessage.Content = new StringContent(exception.Message);
 
             return httpResponseMessage;
