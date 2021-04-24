@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "study.sln",
+    "projects": [
+      "src\\System.Net.Http.Formatting\\System.Net.Http.Formatting.csproj",
+      "src\\System.Web.Cors\\System.Web.Cors.csproj",
+      "src\\System.Web.Http.Cors\\System.Web.Http.Cors.csproj",
+      "src\\System.Web.Http.WebHost\\System.Web.Http.WebHost.csproj",
+      "src\\System.Web.Http\\System.Web.Http.csproj",
+      "study\\WebApi\\WebApi.csproj"
+    ]
+  }
+}
